@@ -1,46 +1,13 @@
 # mod-manager-batch
 
-This project was created using the createnewproject script with the basic template.
+This is a script built for the game ReadyOrNot. Depending on the user selection, it moves your modded `.pak` files into or out of your `paks` directory.
+This will allow you to easily enable or disable mods with a simple script so you don't have to manually cut and paste the pak files.
 
-## Description
-
-Add a brief description of your project here.
+The script looks for each standard pak that comes with the game, ignores them, and then moves all other pak files into a `mods` directory within the `content` directory.
 
 ## Installation
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/yourusername/mod-manager-batch.git
-   cd mod-manager-batch
-   ```
-
-2. Set up a virtual environment:
-   ```
-   python3 -m venv venv
-   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-   ```
-
-3. Install dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
-
-## Usage
-
-Explain how to use your project here.
-
-## Running Tests
-
-To run tests, execute:
-```
-pytest
-```
-
-## Contributing
-
-If you'd like to contribute, please fork the repository and create a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
+1. Download the `.bat` file to your windows PC
+2. Move the `.bat` file to the content directory of Ready Or Not `C:\Program Files (x86)\Steam\steamapps\common\Ready Or Not\ReadyOrNot\Content`
+3. Run the `.bat` file as administrator and follow the instructions to enable/disable files
+4. (Optional but recommended) Create a shortcut on your desktop to the `.bat` file for easy use.
