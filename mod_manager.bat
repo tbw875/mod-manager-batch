@@ -27,7 +27,7 @@ if "%choice%"=="1" (
         set "is_standard=false"
         
         :: Check if this is a standard pak file (pakchunk1-Windows.pak to pakchunk23-Windows.pak)
-        for /l %%i in (1,1,23) do (
+        for /l %%i in (0,1,23) do (
             if "!filename!"=="pakchunk%%i-Windows.pak" (
                 set "is_standard=true"
             )
