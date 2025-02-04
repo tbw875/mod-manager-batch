@@ -79,11 +79,14 @@ if "%choice%"=="3" (
             )
         )
         
-        :: If not a standard file, move it to mods folder
+        :: If not a standard file and not in allowed list, move it to mods folder
         if "!is_standard!"=="false" (
-            echo Moving !filename!...
-            move "%%F" "%MODS_DIR%"
-        )
+            if "!is_online_mod!"=="false" (
+                echo Moving !filename!...
+                move "%%F" "%MODS_DIR%"
+            ) else (
+                echo Keeping allowed mod: !filename!
+            )
     )
     echo -------------------------------------------------
     echo SUCCESS! Online mods enabled.
