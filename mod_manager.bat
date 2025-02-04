@@ -90,6 +90,8 @@ if "%choice%"=="3" (
     )
     echo -------------------------------------------------
     echo SUCCESS! Online mods enabled.
+    timeout /t 2 >nul
+    goto menu
 )
 
 if "%choice%"=="4" (
