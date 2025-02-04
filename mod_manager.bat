@@ -15,7 +15,7 @@ echo ================
 echo 1. Disable Mods (Move to mods folder)
 echo 2. Enable Mods (Move to paks folder)
 echo 3. Enable Online-Safe mods
-echo 3. Exit
+echo 4. Exit
 echo.
 
 set /p choice="Enter your choice (1-4): "
@@ -85,6 +85,8 @@ if "%choice%"=="3" (
             move "%%F" "%MODS_DIR%"
         )
     )
+    echo -------------------------------------------------
+    echo SUCCESS! Online mods enabled.
 )
 
 if "%choice%"=="4" (
