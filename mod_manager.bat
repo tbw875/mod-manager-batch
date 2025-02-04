@@ -58,9 +58,8 @@ if "%choice%"=="2" (
 
 if "%choice%"=="3" (
     echo Enabling ONLINE PLAY Mods
-
     set "online_mods=pakchunk99-Mod_SimpleModMenu.pak pakchunk99-Mod_NoUpperRightText_P.pak pakchunk99-Mod_PlayerLimitEdit_P.pak pakchunk999-Mod_SimpleBlueprintLoader_P.pak pakchunk99-Mods_Gunfighter_5_AIO_P.pak"
-
+    
     for %%F in ("%PAKS_DIR%\*.pak") do (
         set "filename=%%~nxF"
         set "is_standard=false"
@@ -72,6 +71,7 @@ if "%choice%"=="3" (
                 set "is_standard=true"
             )
         )
+        
         :: Check if the file is in our allowed list
         for %%a in (!online_mods!) do (
             if "!filename!"=="%%a" (
@@ -87,7 +87,9 @@ if "%choice%"=="3" (
             ) else (
                 echo Keeping allowed mod: !filename!
             )
+        )
     )
+    
     echo -------------------------------------------------
     echo SUCCESS! Online mods enabled.
     timeout /t 2 >nul
